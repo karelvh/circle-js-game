@@ -18,6 +18,7 @@ var up = false, // W or arrow up
 var playing = false;
 var alreadyExists = false;
 var AlreadyPlayed = 0;
+//var AlreadyShowedScores = 0;
 
    //Edge symbol: 'stage'
    (function(symbolName) {
@@ -242,8 +243,9 @@ var AlreadyPlayed = 0;
          	location.reload();
          }
          function getScores(){
-         	sym.getSymbol("startScreen").play("scores");
-         	downloadScores();
+         			sym.getSymbol("startScreen").play("scores");
+         			downloadScores();
+         			//AlreadyShowedScores = 1;
          }
          function downloadScores(){
              $.ajax({
@@ -258,7 +260,7 @@ var AlreadyPlayed = 0;
              });
          }
          function showScores(){
-             var l = 5;
+             var l = scores.length;
              if(l > 0){
                  var score;
                  for(var i = 0; i < l; i++){

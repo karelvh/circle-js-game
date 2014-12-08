@@ -230,12 +230,12 @@
                             fill: ['rgba(164,164,164,1)']
                         },
                         {
-                            type: 'text',
                             rect: ['0px', '0px', '268px', '63px', 'auto', 'auto'],
+                            font: ['Helvetica, Arial, sans-serif', [50, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', 'normal'],
                             id: 'textScores',
                             text: 'SCORES',
                             align: 'center',
-                            font: ['Helvetica, Arial, sans-serif', [50, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', 'normal']
+                            type: 'text'
                         }
                     ],
                     style: {
@@ -270,12 +270,12 @@
                             fill: ['rgba(164,164,164,1)']
                         },
                         {
-                            font: ['Helvetica, Arial, sans-serif', [50, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', 'normal'],
                             type: 'text',
+                            rect: ['0px', '1px', '268px', '63px', 'auto', 'auto'],
                             id: 'textPlay',
                             text: 'PLAY',
                             align: 'center',
-                            rect: ['0px', '1px', '268px', '63px', 'auto', 'auto']
+                            font: ['Helvetica, Arial, sans-serif', [50, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', 'normal']
                         }
                     ],
                     style: {
@@ -335,10 +335,10 @@
                             type: 'rect',
                             id: 'submitButton',
                             symbolName: 'submitButton',
-                            rect: ['-583px', '163px', '268', '64', 'auto', 'auto']
+                            rect: ['-583px', '84px', '268', '64', 'auto', 'auto']
                         },
                         {
-                            rect: ['-583px', '69px', '268px', '64px', 'auto', 'auto'],
+                            rect: ['-583px', '0px', '268px', '64px', 'auto', 'auto'],
                             id: 'nameTextBoxPlaceholder',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             type: 'rect',
@@ -368,14 +368,14 @@
                     },
                     data: [
                         [
-                            "eid143",
+                            "eid182",
                             "left",
-                            1000,
-                            500,
+                            0,
+                            0,
                             "easeOutQuart",
                             "${playButton}",
                             '-583px',
-                            '0px'
+                            '-583px'
                         ],
                         [
                             "eid158",
@@ -384,7 +384,7 @@
                             0,
                             "easeOutQuart",
                             "${playButton}",
-                            '0px',
+                            '-583px',
                             '-583px'
                         ],
                         [
@@ -448,24 +448,14 @@
                             '-248px'
                         ],
                         [
-                            "eid170",
+                            "eid150",
                             "left",
-                            1000,
-                            500,
-                            "easeOutQuart",
-                            "${nameTextBoxPlaceholder}",
-                            '-583px',
-                            '0px'
-                        ],
-                        [
-                            "eid172",
-                            "left",
-                            2000,
                             0,
-                            "linear",
-                            "${nameTextBoxPlaceholder}",
-                            '0px',
-                            '-583px'
+                            1000,
+                            "easeOutBounce",
+                            "${Ellipse}",
+                            '111px',
+                            '-366px'
                         ],
                         [
                             "eid149",
@@ -478,14 +468,14 @@
                             '1000px'
                         ],
                         [
-                            "eid150",
-                            "left",
+                            "eid151",
+                            "top",
                             0,
                             1000,
                             "easeOutBounce",
                             "${Ellipse}",
-                            '111px',
-                            '-366px'
+                            '51px',
+                            '-426px'
                         ],
                         [
                             "eid161",
@@ -558,14 +548,24 @@
                             '-583px'
                         ],
                         [
-                            "eid151",
-                            "top",
-                            0,
+                            "eid170",
+                            "left",
                             1000,
-                            "easeOutBounce",
-                            "${Ellipse}",
-                            '51px',
-                            '-426px'
+                            500,
+                            "easeOutQuart",
+                            "${nameTextBoxPlaceholder}",
+                            '-583px',
+                            '0px'
+                        ],
+                        [
+                            "eid172",
+                            "left",
+                            2000,
+                            0,
+                            "linear",
+                            "${nameTextBoxPlaceholder}",
+                            '0px',
+                            '-583px'
                         ]
                     ]
                 }
@@ -810,14 +810,14 @@
                             '3px'
                         ],
                         [
-                            "eid118",
-                            "left",
-                            1900,
+                            "eid102",
+                            "top",
+                            1300,
                             100,
                             "easeOutBounce",
-                            "${circle10Copy}",
+                            "${circle4Copy}",
                             '3px',
-                            '-140px'
+                            '143px'
                         ],
                         [
                             "eid104",
@@ -880,14 +880,14 @@
                             '-277px'
                         ],
                         [
-                            "eid102",
-                            "top",
-                            1300,
+                            "eid107",
+                            "left",
+                            1500,
                             100,
                             "easeOutBounce",
-                            "${circle4Copy}",
+                            "${circle6Copy}",
                             '3px',
-                            '143px'
+                            '-277px'
                         ],
                         [
                             "eid128",
@@ -1050,14 +1050,14 @@
                             '3px'
                         ],
                         [
-                            "eid107",
+                            "eid118",
                             "left",
-                            1500,
+                            1900,
                             100,
                             "easeOutBounce",
-                            "${circle6Copy}",
+                            "${circle10Copy}",
                             '3px',
-                            '-277px'
+                            '-140px'
                         ],
                         [
                             "eid112",
@@ -1090,12 +1090,12 @@
                             fill: ['rgba(164,164,164,1.00)']
                         },
                         {
-                            font: ['Arial, Helvetica, sans-serif', [50, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', 'normal'],
                             type: 'text',
+                            rect: ['0px', '0px', '268px', '64px', 'auto', 'auto'],
                             id: 'submitText',
                             text: 'SUBMIT',
                             align: 'center',
-                            rect: ['0px', '0px', '268px', '64px', 'auto', 'auto']
+                            font: ['Arial, Helvetica, sans-serif', [50, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', 'normal']
                         }
                     ],
                     style: {
@@ -1130,12 +1130,12 @@
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
-                            type: 'text',
                             rect: ['0px', '15px', '87px', '44px', 'auto', 'auto'],
+                            font: ['Helvetica, Arial, sans-serif', [30, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', 'normal'],
                             id: 'backText',
                             text: 'BACK',
                             align: 'center',
-                            font: ['Helvetica, Arial, sans-serif', [30, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', 'normal']
+                            type: 'text'
                         }
                     ],
                     style: {

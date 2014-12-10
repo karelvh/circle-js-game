@@ -9,16 +9,11 @@
 (function($, Edge, compId){
 var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonly used Edge classes
 var yvel = 0, xvel = 0;
-var up = false, // W or arrow up
-            left = false, // A or arrow left
-            right = false, // D or arrow right
-            down = false; // S or arrow down			
-//var scoreText = 0;
-//var newScoreText = 0;
+var up = false, left = false, right = false, down = false;
 var playing = false;
 var alreadyExists = false;
 var AlreadyPlayed = 0;
-//var AlreadyShowedScores = 0;
+var alreadyAddedScores = 0;
 
    //Edge symbol: 'stage'
    (function(symbolName) {
@@ -310,10 +305,13 @@ var AlreadyPlayed = 0;
              }
          }
          function addScore(s){
-             var bobTheHtmlBuilder = '<li class="scoresList" style="list-style-type:none;margin-left:30px">';
-             bobTheHtmlBuilder += '<p style="color:white;font-size:30px;font-family:Helvetica,Sans-Serif;">'+s.name+' : '+s.score+'</p>';
-             bobTheHtmlBuilder += '</li>';   
-             $(Stage_startScreen_scoresDisplay).append(bobTheHtmlBuilder);
+         	if(alreadyAddedScores < 5){
+         		var bobTheHtmlBuilder = '<li class="scoresList" style="list-style-type:none;margin-left:30px">';
+             	bobTheHtmlBuilder += '<p style="color:white;font-size:30px;font-family:Helvetica,Sans-Serif;">'+s.name+' : '+s.score+'</p>';
+             	bobTheHtmlBuilder += '</li>';   
+             	$(Stage_startScreen_scoresDisplay).append(bobTheHtmlBuilder);
+             	alreadyAddedScores += 1;
+         	}
          }
          /*
          function moveCircleWithMouse(){

@@ -95,43 +95,55 @@ var AlreadyPlayed = 0;
          	show(circle11);
          	show(circle12);
          	window.timerInterval = setInterval(function(){ timer(oldTime) }, 10);
+         	window.difficultyInterval = setInterval(function(){difficulty()},10);
          	window.collisionInterval = setInterval(function(){checkForCollision()},5);
          	window.playerCircleInterval = setInterval(function(){movePlayerCircle()},8);
          	window.circle1Interval = setInterval(function(){moveit(circle1)},100);
          	window.circle2Interval = setInterval(function(){moveit(circle2)},100);
          	window.circle3Interval = setInterval(function(){moveit(circle3)},100);
          	window.circle4Interval = setInterval(function(){moveit(circle4)},100);
-         	window.circle5Interval = setInterval(function(){moveit(circle5)},100);
-         	window.circle6Interval = setInterval(function(){moveit(circle6)},100);
-         	window.circle7Interval = setInterval(function(){moveit(circle7)},100);
-         	window.circle8Interval = setInterval(function(){moveit(circle8)},100);
-         	window.circle9Interval = setInterval(function(){moveit(circle9)},100);
-         	window.circle10Interval = setInterval(function(){moveit(circle10)},100);
-         	window.circle11Interval = setInterval(function(){moveit(circle11)},100);
-         	window.circle12Interval = setInterval(function(){moveit(circle12)},100);
-         	//AlreadyPlayed+=1;
+         	//window.circle5Interval = setInterval(function(){moveit(circle5)},100);
+         	//window.circle6Interval = setInterval(function(){moveit(circle6)},100);
+         	//window.circle7Interval = setInterval(function(){moveit(circle7)},100);
+         	//window.circle8Interval = setInterval(function(){moveit(circle8)},100);
+         	//window.circle9Interval = setInterval(function(){moveit(circle9)},100);
+         	//window.circle10Interval = setInterval(function(){moveit(circle10)},100);
+         	//window.circle11Interval = setInterval(function(){moveit(circle11)},100);
+         	//window.circle12Interval = setInterval(function(){moveit(circle12)},100);
          	}
          	if(AlreadyPlayed > 0){
          		location.reload();
-         		//AlreadyPlayed = 0;
          	}
          }
          function stopPlaying(){
          	clearInterval(timerInterval);
+         	clearInterval(difficultyInterval);
          	clearInterval(playerCircleInterval);
          	clearInterval(collisionInterval);
          	clearInterval(circle1Interval);
          	clearInterval(circle2Interval);
          	clearInterval(circle3Interval);
          	clearInterval(circle4Interval);
-         	clearInterval(circle5Interval);
-         	clearInterval(circle6Interval);
-         	clearInterval(circle7Interval);
-         	clearInterval(circle8Interval);
-         	clearInterval(circle9Interval);
-         	clearInterval(circle10Interval);
-         	clearInterval(circle11Interval);
-         	clearInterval(circle12Interval);
+         	if(newTime > 5000){
+         		clearInterval(circle5Interval);
+         	}
+         	if(newTime > 10000){
+         		clearInterval(circle6Interval);
+         	}
+         	if(newTime > 15000){
+         		clearInterval(circle7Interval);
+         	}
+         	if(newTime > 20000){
+         		clearInterval(circle8Interval);
+         	}
+         	if(newTime > 25000){
+         		clearInterval(circle9Interval);
+         		clearInterval(circle10Interval);
+         	}
+         	if(newTime > 30000){
+         		clearInterval(circle11Interval);
+         		clearInterval(circle12Interval);
+         	}
          	startScreen.show();
          	sym.getSymbol("startScreen").play("endscreen");
          	AlreadyPlayed+=1;
@@ -196,6 +208,48 @@ var AlreadyPlayed = 0;
          	timeMilli = timeMilli % 100;
          	sym.$("timerText")[0].innerHTML = timeMin +":"+timeSec+":"+timeMilli;
          }
+         
+         
+         
+         
+         
+         
+         function difficulty(){
+         	if(newTime > 5000){
+         		window.circle5Interval = setInterval(function(){moveit(circle5)},100);
+         	}
+         	if(newTime > 10000){
+         		window.circle6Interval = setInterval(function(){moveit(circle6)},100);
+         	}
+         	if(newTime > 15000){
+         		window.circle7Interval = setInterval(function(){moveit(circle7)},100);
+         	}
+         	if(newTime > 20000){
+         		window.circle8Interval = setInterval(function(){moveit(circle8)},100);
+         	}
+         	if(newTime > 25000){
+         		window.circle9Interval = setInterval(function(){moveit(circle9)},100);
+         		window.circle10Interval = setInterval(function(){moveit(circle10)},100);
+         	}
+         	if(newTime > 30000){
+         		window.circle11Interval = setInterval(function(){moveit(circle11)},100);
+         		window.circle12Interval = setInterval(function(){moveit(circle12)},100);
+         	}
+         }
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
          function moveit(circle) {
             var newTop = Math.floor(Math.random()*440);
             var newLeft = Math.floor(Math.random()*760);

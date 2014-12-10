@@ -208,12 +208,6 @@ var AlreadyPlayed = 0;
          	timeMilli = timeMilli % 100;
          	sym.$("timerText")[0].innerHTML = timeMin +":"+timeSec+":"+timeMilli;
          }
-         
-         
-         
-         
-         
-         
          function difficulty(){
          	if(newTime > 5000){
          		window.circle5Interval = setInterval(function(){moveit(circle5)},100);
@@ -236,20 +230,6 @@ var AlreadyPlayed = 0;
          		window.circle12Interval = setInterval(function(){moveit(circle12)},100);
          	}
          }
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
          function moveit(circle) {
             var newTop = Math.floor(Math.random()*440);
             var newLeft = Math.floor(Math.random()*760);

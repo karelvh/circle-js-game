@@ -6,7 +6,7 @@
         header('HTTP/1.1 500 Internal Server Error');
         exit();
     }
-    if ($result = $mysqli->query("SELECT name, score FROM `webAdvanced_Game_Scores` ORDER BY score DESC LIMIT 5")) {
+    if ($result = $mysqli->query("SELECT name, max(score) AS score FROM `webAdvanced_Game_Scores` Group By name ORDER BY score DESC LIMIT 5")) {
         $res = array();
         while ($row = $result->fetch_assoc())
             $res[] = $row;

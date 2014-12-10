@@ -89,7 +89,7 @@ var alreadyAddedScores = 0;
          	show(circle11);
          	show(circle12);
          	window.timerInterval = setInterval(function(){ timer(oldTime) }, 10);
-         	window.difficultyInterval = setInterval(function(){difficulty()},1500);
+         	window.difficultyInterval = setInterval(function(){difficulty()},250);
          	window.collisionInterval = setInterval(function(){checkForCollision()},5);
          	window.playerCircleInterval = setInterval(function(){movePlayerCircle()},8);
          	window.circle1Interval = setInterval(function(){moveit(circle1)},100);
@@ -230,6 +230,12 @@ var alreadyAddedScores = 0;
          function moveit(circle) {
             var newTop = Math.floor(Math.random()*440);
             var newLeft = Math.floor(Math.random()*760);
+            //var newTop = Math.floor(Math.random()*playerCircle.offset().top);
+            //var newLeft = Math.floor(Math.random()*playerCircle.offset().left);
+            //var newTop = playerCircle.offset().top;
+            //updatePlayerLoc();   
+            //console.log(newTop);
+            //var newLeft = playerCircle.offset().left;
          	var newDuration = Math.floor(Math.random()*(5000-1500)+1500);	
             circle.animate({
             	top: newTop,

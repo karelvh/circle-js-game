@@ -230,12 +230,12 @@
                             fill: ['rgba(164,164,164,1)']
                         },
                         {
+                            type: 'text',
                             rect: ['0px', '0px', '268px', '63px', 'auto', 'auto'],
-                            font: ['Helvetica, Arial, sans-serif', [50, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', 'normal'],
                             id: 'textScores',
                             text: 'SCORES',
                             align: 'center',
-                            type: 'text'
+                            font: ['Helvetica, Arial, sans-serif', [50, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', 'normal']
                         }
                     ],
                     style: {
@@ -270,12 +270,12 @@
                             fill: ['rgba(164,164,164,1)']
                         },
                         {
+                            rect: ['0px', '1px', '268px', '63px', 'auto', 'auto'],
                             font: ['Helvetica, Arial, sans-serif', [50, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', 'normal'],
-                            type: 'text',
                             id: 'textPlay',
                             text: 'PLAY',
                             align: 'center',
-                            rect: ['0px', '1px', '268px', '63px', 'auto', 'auto']
+                            type: 'text'
                         }
                     ],
                     style: {
@@ -311,11 +311,11 @@
                             fill: ['rgba(210,13,13,1.00)']
                         },
                         {
-                            transform: [[], [], [], ['1', '1.01587']],
+                            type: 'rect',
                             id: 'scoresButton',
                             symbolName: 'scoresButton',
-                            rect: ['-583px', '110px', '268', '63', 'auto', 'auto'],
-                            type: 'rect'
+                            transform: [[], [], [], ['1', '1.01587']],
+                            rect: ['-583px', '110px', '268', '63', 'auto', 'auto']
                         },
                         {
                             rect: ['-109px', '-139px', '486px', '434px', 'auto', 'auto'],
@@ -332,26 +332,26 @@
                             type: 'rect'
                         },
                         {
-                            transform: [[], [], [], ['0.69063', '0.69063']],
+                            type: 'rect',
                             id: 'replayButton',
                             symbolName: 'replayButton',
-                            rect: ['-583px', '182px', '269', '75', 'auto', 'auto'],
-                            type: 'rect'
+                            transform: [[], [], [], ['0.69063', '0.69063']],
+                            rect: ['-583px', '182px', '269', '75', 'auto', 'auto']
                         },
                         {
+                            rect: ['-583px', '156px', '170px', '33px', 'auto', 'auto'],
                             font: ['Helvetica, Arial, sans-serif', [22, 'px'], 'rgba(255,255,255,1)', '400', 'none solid rgb(255, 255, 255)', 'normal', 'break-word', 'normal'],
-                            type: 'text',
                             id: 'orReplayText',
                             text: 'or replay instead',
                             align: 'center',
-                            rect: ['-583px', '156px', '170px', '33px', 'auto', 'auto']
+                            type: 'text'
                         },
                         {
-                            transform: [[], [], [], ['0.6953', '0.80933']],
+                            type: 'rect',
                             id: 'submitButton',
                             symbolName: 'submitButton',
-                            rect: ['-583px', '90px', '268', '64', 'auto', 'auto'],
-                            type: 'rect'
+                            transform: [[], [], [], ['0.6953', '0.80933']],
+                            rect: ['-583px', '90px', '268', '64', 'auto', 'auto']
                         },
                         {
                             type: 'rect',
@@ -856,34 +856,34 @@
                             '173px'
                         ],
                         [
-                            "eid111",
-                            "left",
-                            1700,
+                            "eid106",
+                            "top",
+                            1500,
                             0,
                             "easeOutBounce",
-                            "${circle8Copy}",
+                            "${circle6Copy}",
                             '3px',
                             '3px'
                         ],
                         [
-                            "eid102",
-                            "top",
-                            1300,
+                            "eid118",
+                            "left",
+                            1900,
                             100,
                             "easeOutBounce",
-                            "${circle4Copy}",
+                            "${circle10Copy}",
                             '3px',
-                            '173px'
+                            '-180px'
                         ],
                         [
-                            "eid96",
-                            "top",
-                            1000,
+                            "eid104",
+                            "left",
+                            1400,
                             100,
                             "easeOutBounce",
-                            "${circle1Copy}",
+                            "${circle5Copy}",
                             '3px',
-                            '-170px'
+                            '357px'
                         ],
                         [
                             "eid113",
@@ -896,24 +896,24 @@
                             '-180px'
                         ],
                         [
-                            "eid112",
-                            "top",
-                            1800,
+                            "eid116",
+                            "left",
+                            2000,
                             100,
                             "easeOutBounce",
-                            "${circle9Copy}",
+                            "${circle11Copy}",
                             '3px',
-                            '-170px'
+                            '183px'
                         ],
                         [
-                            "eid107",
-                            "left",
-                            1500,
+                            "eid102",
+                            "top",
+                            1300,
                             100,
                             "easeOutBounce",
-                            "${circle6Copy}",
+                            "${circle4Copy}",
                             '3px',
-                            '-349px'
+                            '173px'
                         ],
                         [
                             "eid119",
@@ -936,12 +936,12 @@
                             '-349px'
                         ],
                         [
-                            "eid106",
-                            "top",
-                            1500,
+                            "eid111",
+                            "left",
+                            1700,
                             0,
                             "easeOutBounce",
-                            "${circle6Copy}",
+                            "${circle8Copy}",
                             '3px',
                             '3px'
                         ],
@@ -956,14 +956,14 @@
                             '45px'
                         ],
                         [
-                            "eid105",
+                            "eid109",
                             "top",
-                            1400,
-                            0,
+                            1600,
+                            100,
                             "easeOutBounce",
-                            "${circle5Copy}",
+                            "${circle7Copy}",
                             '3px',
-                            '3px'
+                            '-170px'
                         ],
                         [
                             "eid103",
@@ -986,14 +986,14 @@
                             '-170px'
                         ],
                         [
-                            "eid116",
-                            "left",
-                            2000,
+                            "eid112",
+                            "top",
+                            1800,
                             100,
                             "easeOutBounce",
-                            "${circle11Copy}",
+                            "${circle9Copy}",
                             '3px',
-                            '183px'
+                            '-170px'
                         ],
                         [
                             "eid114",
@@ -1026,8 +1026,8 @@
                             '-349px'
                         ],
                         [
-                            "eid130",
-                            "left",
+                            "eid129",
+                            "top",
                             0,
                             1000,
                             "easeOutBounce",
@@ -1036,18 +1036,18 @@
                             '0px'
                         ],
                         [
-                            "eid109",
+                            "eid105",
                             "top",
-                            1600,
-                            100,
+                            1400,
+                            0,
                             "easeOutBounce",
-                            "${circle7Copy}",
+                            "${circle5Copy}",
                             '3px',
-                            '-170px'
+                            '3px'
                         ],
                         [
-                            "eid129",
-                            "top",
+                            "eid130",
+                            "left",
                             0,
                             1000,
                             "easeOutBounce",
@@ -1076,14 +1076,14 @@
                             '173px'
                         ],
                         [
-                            "eid100",
-                            "top",
+                            "eid101",
+                            "left",
                             1200,
                             100,
                             "easeOutBounce",
                             "${circle3Copy}",
                             '3px',
-                            '-170px'
+                            '357px'
                         ],
                         [
                             "eid115",
@@ -1096,34 +1096,34 @@
                             '183px'
                         ],
                         [
-                            "eid118",
+                            "eid107",
                             "left",
-                            1900,
+                            1500,
                             100,
                             "easeOutBounce",
-                            "${circle10Copy}",
+                            "${circle6Copy}",
                             '3px',
-                            '-180px'
+                            '-349px'
                         ],
                         [
-                            "eid104",
-                            "left",
-                            1400,
+                            "eid96",
+                            "top",
+                            1000,
                             100,
                             "easeOutBounce",
-                            "${circle5Copy}",
+                            "${circle1Copy}",
                             '3px',
-                            '357px'
+                            '-170px'
                         ],
                         [
-                            "eid101",
-                            "left",
+                            "eid100",
+                            "top",
                             1200,
                             100,
                             "easeOutBounce",
                             "${circle3Copy}",
                             '3px',
-                            '357px'
+                            '-170px'
                         ]
                     ]
                 }
@@ -1146,12 +1146,12 @@
                             fill: ['rgba(164,164,164,1.00)']
                         },
                         {
+                            font: ['Arial, Helvetica, sans-serif', [50, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', 'normal'],
                             type: 'text',
-                            rect: ['0px', '0px', '268px', '64px', 'auto', 'auto'],
                             id: 'submitText',
                             text: 'SUBMIT',
                             align: 'center',
-                            font: ['Arial, Helvetica, sans-serif', [50, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', 'normal']
+                            rect: ['0px', '0px', '268px', '64px', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -1186,12 +1186,12 @@
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
+                            type: 'text',
                             rect: ['0px', '15px', '87px', '44px', 'auto', 'auto'],
-                            font: ['Helvetica, Arial, sans-serif', [30, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', 'normal'],
                             id: 'backText',
                             text: 'BACK',
                             align: 'center',
-                            type: 'text'
+                            font: ['Helvetica, Arial, sans-serif', [30, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', 'normal']
                         }
                     ],
                     style: {
@@ -1226,12 +1226,12 @@
                             fill: ['rgba(234,101,43,1.00)']
                         },
                         {
+                            font: ['Helvetica, Arial, sans-serif', [50, 'px'], 'rgba(255,255,255,1)', '400', 'none solid rgb(255, 255, 255)', 'normal', 'break-word', 'normal'],
                             type: 'text',
-                            rect: ['1px', '8px', '268px', '67px', 'auto', 'auto'],
                             id: 'replayText',
                             text: 'REPLAY',
                             align: 'center',
-                            font: ['Helvetica, Arial, sans-serif', [50, 'px'], 'rgba(255,255,255,1)', '400', 'none solid rgb(255, 255, 255)', 'normal', 'break-word', 'normal']
+                            rect: ['1px', '8px', '268px', '67px', 'auto', 'auto']
                         }
                     ],
                     style: {

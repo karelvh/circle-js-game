@@ -69,7 +69,6 @@ var AlreadyPlayed = 0;
          $("#Stage_startScreen_scoresButton")[0].addEventListener("click", function(){getScores();}, false);
          $("#Stage_startScreen_backButton")[0].addEventListener("click", function(){introSnel();}, false);
          $("#Stage_startScreen_replayButton")[0].addEventListener("click", function(){replay();}, false);
-         //sadsa
          
          function introSnel(){
          	sym.getSymbol("startScreen").play("startSnel");
@@ -95,7 +94,7 @@ var AlreadyPlayed = 0;
          	show(circle11);
          	show(circle12);
          	window.timerInterval = setInterval(function(){ timer(oldTime) }, 10);
-         	window.difficultyInterval = setInterval(function(){difficulty()},10);
+         	window.difficultyInterval = setInterval(function(){difficulty()},1500);
          	window.collisionInterval = setInterval(function(){checkForCollision()},5);
          	window.playerCircleInterval = setInterval(function(){movePlayerCircle()},8);
          	window.circle1Interval = setInterval(function(){moveit(circle1)},100);
@@ -228,6 +227,9 @@ var AlreadyPlayed = 0;
          	if(newTime > 30000){
          		window.circle11Interval = setInterval(function(){moveit(circle11)},100);
          		window.circle12Interval = setInterval(function(){moveit(circle12)},100);
+         	}
+         	if(newTime > 30001){
+         		clearInterval(difficultyInterval);
          	}
          }
          function moveit(circle) {

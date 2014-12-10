@@ -63,11 +63,12 @@ var AlreadyPlayed = 0;
          hide(circle11);
          hide(circle12);
          sym.getSymbol("startScreen").play("start");
-         moveCircleWithMouse();
+         //moveCircleWithMouse();
          $("#Stage_startScreen_playButton")[0].addEventListener("click", function(){startPlaying();}, false);
          $("#Stage_startScreen_submitButton")[0].addEventListener("click", function(){submitScore();}, false);
          $("#Stage_startScreen_scoresButton")[0].addEventListener("click", function(){getScores();}, false);
          $("#Stage_startScreen_backButton")[0].addEventListener("click", function(){introSnel();}, false);
+         $("#Stage_startScreen_replayButton")[0].addEventListener("click", function(){replay();}, false);
          //sadsa
          
          function introSnel(){
@@ -236,6 +237,9 @@ var AlreadyPlayed = 0;
          	collision(circle11, playerCircle);
          	collision(circle12, playerCircle);
          }
+         function replay(){
+         	location.reload();
+         }
          function submitScore(){
          	var name = sym.$("#nameTextbox").val();
          	$.post("http://student.howest.be/karel.van.haeverbe1/gameWeb/php/submitscores.php", {"name": name, "score": score});
@@ -275,9 +279,11 @@ var AlreadyPlayed = 0;
              bobTheHtmlBuilder += '</li>';   
              $(Stage_startScreen_scoresDisplay).append(bobTheHtmlBuilder);
          }
+         /*
          function moveCircleWithMouse(){
          	$("#Stage_playerCircle").draggable({drag: function(){checkForCollision();}});
          }
+         */
 
       });
       //Edge binding end
@@ -415,5 +421,13 @@ var AlreadyPlayed = 0;
    
    })("backButton");
    //Edge symbol end:'backButton'
+
+   //=========================================================
+   
+   //Edge symbol: 'replayButton'
+   (function(symbolName) {   
+   
+   })("replayButton");
+   //Edge symbol end:'replayButton'
 
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "game");

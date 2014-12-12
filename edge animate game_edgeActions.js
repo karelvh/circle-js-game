@@ -70,40 +70,39 @@ var alreadyAddedScores = 0;
          }
          function startPlaying(){
          	if(AlreadyPlayed == 0){
-         	//console.log(AlreadyPlayed);
-         	oldTime = 0;
-         	hide(startScreen);
-         	hide(introSymbol);
-         	show(timerText);
-         	show(playerCircle);
-         	show(circle1);
-         	show(circle2);
-         	show(circle3);
-         	show(circle4);
-         	show(circle5);
-         	show(circle6);
-         	show(circle7);
-         	show(circle8);
-         	show(circle9);
-         	show(circle10);
-         	show(circle11);
-         	show(circle12);
-         	window.timerInterval = setInterval(function(){ timer(oldTime) }, 10);
-         	window.difficultyInterval = setInterval(function(){difficulty()},250);
-         	window.collisionInterval = setInterval(function(){checkForCollision()},5);
-         	window.playerCircleInterval = setInterval(function(){movePlayerCircle()},8);
-         	window.circle1Interval = setInterval(function(){moveit(circle1)},100);
-         	window.circle2Interval = setInterval(function(){moveit(circle2)},100);
-         	window.circle3Interval = setInterval(function(){moveit(circle3)},100);
-         	window.circle4Interval = setInterval(function(){moveit(circle4)},100);
-         	//window.circle5Interval = setInterval(function(){moveit(circle5)},100);
-         	//window.circle6Interval = setInterval(function(){moveit(circle6)},100);
-         	//window.circle7Interval = setInterval(function(){moveit(circle7)},100);
-         	//window.circle8Interval = setInterval(function(){moveit(circle8)},100);
-         	//window.circle9Interval = setInterval(function(){moveit(circle9)},100);
-         	//window.circle10Interval = setInterval(function(){moveit(circle10)},100);
-         	//window.circle11Interval = setInterval(function(){moveit(circle11)},100);
-         	//window.circle12Interval = setInterval(function(){moveit(circle12)},100);
+         		oldTime = 0;
+         		hide(startScreen);
+         		hide(introSymbol);
+         		show(timerText);
+         		show(playerCircle);
+         		show(circle1);
+         		show(circle2);
+         		show(circle3);
+         		show(circle4);
+         		show(circle5);
+         		show(circle6);
+         		show(circle7);
+         		show(circle8);
+         		show(circle9);
+         		show(circle10);
+         		show(circle11);
+         		show(circle12);
+         		window.timerInterval = setInterval(function(){ timer(oldTime) },10);
+         		window.difficultyInterval = setInterval(function(){difficulty()},250);
+         		window.collisionInterval = setInterval(function(){checkForCollision()},10);
+         		window.playerCircleInterval = setInterval(function(){movePlayerCircle()},10);
+         		window.circle1Interval = setInterval(function(){moveit(circle1)},100);
+         		window.circle2Interval = setInterval(function(){moveit(circle2)},100);
+         		window.circle3Interval = setInterval(function(){moveit(circle3)},100);
+         		window.circle4Interval = setInterval(function(){moveit(circle4)},100);
+         		//window.circle5Interval = setInterval(function(){moveit(circle5)},100);
+         		//window.circle6Interval = setInterval(function(){moveit(circle6)},100);
+         		//window.circle7Interval = setInterval(function(){moveit(circle7)},100);
+         		//window.circle8Interval = setInterval(function(){moveit(circle8)},100);
+         		//window.circle9Interval = setInterval(function(){moveit(circle9)},100);
+         		//window.circle10Interval = setInterval(function(){moveit(circle10)},100);
+         		//window.circle11Interval = setInterval(function(){moveit(circle11)},100);
+         		//window.circle12Interval = setInterval(function(){moveit(circle12)},100);
          	}
          	if(AlreadyPlayed > 0){
          		location.reload();
@@ -204,24 +203,24 @@ var alreadyAddedScores = 0;
          }
          function difficulty(){
          	if(newTime > 5000){
-         		window.circle5Interval = setInterval(function(){moveit(circle5)},100);
+         		window.circle5Interval = setInterval(function(){moveit(circle5)},1000);
          	}
          	if(newTime > 10000){
-         		window.circle6Interval = setInterval(function(){moveit(circle6)},100);
+         		window.circle6Interval = setInterval(function(){moveit(circle6)},1000);
          	}
          	if(newTime > 15000){
-         		window.circle7Interval = setInterval(function(){moveit(circle7)},100);
+         		window.circle7Interval = setInterval(function(){moveit(circle7)},1000);
          	}
          	if(newTime > 20000){
-         		window.circle8Interval = setInterval(function(){moveit(circle8)},100);
+         		window.circle8Interval = setInterval(function(){moveit(circle8)},1000);
          	}
          	if(newTime > 25000){
-         		window.circle9Interval = setInterval(function(){moveit(circle9)},100);
-         		window.circle10Interval = setInterval(function(){moveit(circle10)},100);
+         		window.circle9Interval = setInterval(function(){moveit(circle9)},1000);
+         		window.circle10Interval = setInterval(function(){moveit(circle10)},1000);
          	}
          	if(newTime > 30000){
-         		window.circle11Interval = setInterval(function(){moveit(circle11)},100);
-         		window.circle12Interval = setInterval(function(){moveit(circle12)},100);
+         		window.circle11Interval = setInterval(function(){moveit(circle11)},1000);
+         		window.circle12Interval = setInterval(function(){moveit(circle12)},1000);
          	}
          	if(newTime > 30001){
          		clearInterval(difficultyInterval);
@@ -230,12 +229,6 @@ var alreadyAddedScores = 0;
          function moveit(circle) {
             var newTop = Math.floor(Math.random()*440);
             var newLeft = Math.floor(Math.random()*760);
-            //var newTop = Math.floor(Math.random()*playerCircle.offset().top);
-            //var newLeft = Math.floor(Math.random()*playerCircle.offset().left);
-            //var newTop = playerCircle.offset().top;
-            //updatePlayerLoc();   
-            //console.log(newTop);
-            //var newLeft = playerCircle.offset().left;
          	var newDuration = Math.floor(Math.random()*(5000-1500)+1500);	
             circle.animate({
             	top: newTop,
@@ -286,7 +279,6 @@ var alreadyAddedScores = 0;
          function getScores(){
          			sym.getSymbol("startScreen").play("scores");
          			downloadScores();
-         			//AlreadyShowedScores = 1;
          }
          function downloadScores(){
              $.ajax({

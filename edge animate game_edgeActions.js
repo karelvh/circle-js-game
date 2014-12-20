@@ -336,13 +336,7 @@ var alreadyAddedScores = 0;
          
 
       });
-      //Edge binding end
-
-      
-
-      
-
-      
+      //Edge binding end     
 
    })("stage");
    //Edge symbol end:'stage'

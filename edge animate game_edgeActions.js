@@ -272,7 +272,7 @@ var alreadyAddedScores = 0;
          }
          function submitScore(){
          	var name = sym.$("#nameTextbox").val();
-         	$.post("http://student.howest.be/karel.van.haeverbe1/gameWeb/php/submitscores.php", {"name": name, "score": score});
+         	$.post("http://student.howest.be/karel.van.haeverbe1/gameweb/php/submitscores.php", {"name": name, "score": score});
          	console.log("saved (" + name + ":" + score + ")");
          	location.reload();
          }
@@ -283,7 +283,7 @@ var alreadyAddedScores = 0;
          function downloadScores(){
              $.ajax({
                  dataType: "json",
-                 url: "http://student.howest.be/karel.van.haeverbe1/gameWeb/php/getscores.php",
+                 url: "http://student.howest.be/karel.van.haeverbe1/gameweb/php/getscores.php",
                  data: "",
                  success: function(response){
                     console.log(response);
